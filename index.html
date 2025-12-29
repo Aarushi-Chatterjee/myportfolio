@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AARUSHI CHATTERJEE | ECE Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@800&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="notebook-bg"></div>
+
+    <header>
+        <h1>AARUSHI CHATTERJEE</h1>
+        <nav>
+            <ul>
+                <li><a href="#" data-window="about">About</a></li>
+                <li><a href="#" data-window="publications">Publications</a></li>
+                <li><a href="#" data-window="projects">Projects</a></li>
+                <li><a href="#" data-window="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="workspace">
+        <div class="workspace-icons">
+            <div class="icon-item" onclick="openWindow('about')">
+                <div class="folder-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="16" rx="2" />
+                        <circle cx="12" cy="10" r="3" />
+                        <path d="M7 20v-1a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1" />
+                    </svg>
+                </div>
+                <span>About Me</span>
+            </div>
+            <div class="icon-item" onclick="openWindow('publications')">
+                <div class="folder-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-0.5-5z" />
+                        <path d="M6.5 18H20" />
+                        <path d="M12 8h3" />
+                        <path d="M12 12h3" />
+                    </svg>
+                </div>
+                <span>Publications</span>
+            </div>
+            <div class="icon-item" onclick="openWindow('projects')">
+                <div class="folder-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                        <rect x="9" y="9" width="6" height="6" />
+                        <path d="M9 1v3" />
+                        <path d="M15 1v3" />
+                        <path d="M9 20v3" />
+                        <path d="M15 20v3" />
+                        <path d="M20 9h3" />
+                        <path d="M20 15h3" />
+                        <path d="M1 9h3" />
+                        <path d="M1 15h3" />
+                    </svg>
+                </div>
+                <span>Projects</span>
+            </div>
+            <div class="icon-item" onclick="openWindow('contact')">
+                <div class="folder-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                </div>
+                <span>Contact</span>
+            </div>
+        </div>
+
+        <div class="sticky-note yellow-note">
+            <p>Current Focus:</p>
+            <p class="handwritten">Digital Signal Processing Lab</p>
+        </div>
+
+        <div class="sticky-note pink-note">
+            <p>Note to self:</p>
+            <p class="handwritten">Check sub-micron circuit design refs.</p>
+        </div>
+
+        <div class="landing-text" id="landing-hero">
+            <h2>Welcome to Portfolio</h2>
+            <p id="typing-subtitle"></p>
+        </div>
+
+        <!-- Window: About -->
+        <div id="window-about" class="window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <span class="control close" onclick="closeWindow('about')"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <span class="window-title">About Me</span>
+            </div>
+            <div class="window-content">
+                <h2>Hello, I'm Aarushi</h2>
+                <p>I am a 2nd-year Electronics and Communication Engineering (ECE) student with a deep passion for core
+                    electronics.</p>
+                <p style="margin-top: 1rem;">My journey is defined by a curiosity for how things work at a fundamental
+                    level—from circuit design to signal processing.</p>
+                <p style="margin-top: 1rem;">I consider myself a disciplined learner and a focused builder. Whether I'm
+                    deep into a lab project or exploring new concepts, I usually have my headphones on and my mind
+                    immersed in the task at hand.</p>
+            </div>
+        </div>
+
+        <!-- Window: Publications -->
+        <div id="window-publications" class="window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <span class="control close" onclick="closeWindow('publications')"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <span class="window-title">Publications</span>
+            </div>
+            <div class="window-content">
+                <h2>Academic Papers</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Advanced Signal Processing in ECE</h3>
+                        <p>A brief overview of signal modulation techniques and their practical applications.</p>
+                        <a href="#" class="card-link">View Paper &rarr;</a>
+                    </div>
+                    <div class="card">
+                        <h3>Core Electronics: The Future</h3>
+                        <p>Exploring the potential of sub-micron circuit design.</p>
+                        <a href="#" class="card-link">View Paper &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Window: Projects -->
+        <div id="window-projects" class="window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <span class="control close" onclick="closeWindow('projects')"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <span class="window-title">Projects</span>
+            </div>
+            <div class="window-content">
+                <h2>Engineering Projects</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Embedded Systems Lab</h3>
+                        <p>Microcontroller-based automated system for real-time monitoring.</p>
+                    </div>
+                    <div class="card" style="border-style: dashed; opacity: 0.6;">
+                        <h3 style="font-family: var(--handwriting-font);">Working...</h3>
+                        <p>New lab project in progress.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Window: Contact -->
+        <div id="window-contact" class="window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <span class="control close" onclick="closeWindow('contact')"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <span class="window-title">Contact</span>
+            </div>
+            <div class="window-content">
+                <h2>Get in Touch</h2>
+                <p>I am always open to discussing core electronics or academic collaborations.</p>
+                <div style="margin-top: 2rem; display: flex; gap: 2rem;">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                    <a href="#">Email</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
