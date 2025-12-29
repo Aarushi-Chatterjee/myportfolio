@@ -395,6 +395,10 @@ nav a:hover {
     transform: rotate(-3deg);
 }
 
+.yellow-note .handwritten {
+    font-size: 1.0rem !important;
+}
+
 .mint-note {
     background: #e8f5e9;
     /* Soft Mint Green */
