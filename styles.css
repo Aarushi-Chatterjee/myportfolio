@@ -336,6 +336,14 @@ nav a:hover {
     transform: rotate(-3deg);
 }
 
+.mint-note {
+    background: #e8f5e9;
+    /* Soft Mint Green */
+    top: 5%;
+    right: 15%;
+    transform: rotate(2deg);
+}
+
 .pink-note {
     background: #f8bbd0;
     bottom: 30%;
