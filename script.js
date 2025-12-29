@@ -61,4 +61,26 @@ document.addEventListener('DOMContentLoaded', () => {
     if (landingHero) {
         landingHero.style.transition = 'opacity 0.3s ease';
     }
+
+    // Add fade-in animation to sticky notes
+    const stickyNotes = document.querySelectorAll('.sticky-note');
+    stickyNotes.forEach((note, index) => {
+        note.style.opacity = '0';
+        note.style.transform = note.style.transform + ' translateY(20px)';
+        setTimeout(() => {
+            note.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            note.style.opacity = '1';
+            note.style.transform = note.style.transform.replace('translateY(20px)', 'translateY(0)');
+        }, 800 + (index * 150));
+    });
+
+    // Add subtle wiggle animation to sticky notes on click
+    stickyNotes.forEach(note => {
+        note.addEventListener('click', function() {
+            this.style.animation = 'wiggle 0.5s ease';
+            setTimeout(() => {
+                this.style.animation = '';
+            }, 500);
+        });
+    });
 });
