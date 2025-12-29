@@ -158,10 +158,13 @@ nav a:hover {
 /* Window Content */
 .window-content {
     flex: 1;
-    padding: 3rem;
     overflow-y: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
-    background-size: 100% 2rem;
+    background-image: url('blueprint-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 3rem;
+    /* Restoring original padding */
 }
 
 .window-content h2 {
@@ -177,12 +180,6 @@ nav a:hover {
     grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
     align-items: start;
-    background-image: url('blueprint-bg.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 2rem;
-    border-radius: 0 0 8px 8px;
 }
 
 .profile-area {
@@ -272,11 +269,6 @@ nav a:hover {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 1.5rem;
-    background-image: url('blueprint-bg.png');
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
-    border-radius: 12px;
 }
 
 .card {
@@ -463,8 +455,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #1e3799 0%, #0c2461 100%);
-    /* Blueprint Blue Gradient */
+    background: linear-gradient(135deg, #a8dadc 0%, #457b9d 100%);
     color: white;
     border-top: none;
     z-index: 5;
