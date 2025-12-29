@@ -455,8 +455,10 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #a8dadc 0%, #457b9d 100%);
-    color: white;
+    background: #D0EFFF;
+    /* User Requested Sky Blue */
+    color: #333;
+    /* Darker text for contrast against light blue */
     border-top: none;
     z-index: 5;
 }
@@ -469,15 +471,17 @@ nav a:hover {
 .social-icon {
     width: 60px;
     height: 60px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.5);
+    /* More visible on light background */
     border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #457b9d;
+    /* Darker icon color for contrast */
     text-decoration: none;
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .social-icon:hover {
