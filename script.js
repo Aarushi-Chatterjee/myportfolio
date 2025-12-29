@@ -37,18 +37,7 @@ function closeWindow(id) {
     }
 }
 
-// Typing Effect Engine
-const typingText = "Explore my journey in Core Electronics & Signal Processing...";
-const subtitleElement = document.getElementById('typing-subtitle');
-let index = 0;
-
-function typeWriter() {
-    if (index < typingText.length && subtitleElement) {
-        subtitleElement.innerHTML += typingText.charAt(index);
-        index++;
-        setTimeout(typeWriter, 50);
-    }
-}
+// Initial Setup on Page Load
 
 document.addEventListener('DOMContentLoaded', () => {
     // Navigation link handling
@@ -61,9 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Start typing effect
-    setTimeout(typeWriter, 1000);
 
     // Auto-open About Me window on load
     setTimeout(() => {

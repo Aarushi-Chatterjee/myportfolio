@@ -81,16 +81,6 @@
                 </div>
                 <span>Projects</span>
             </div>
-            <div class="icon-item" onclick="openWindow('contact')">
-                <div class="folder-icon">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="4" width="20" height="16" rx="2" />
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                    </svg>
-                </div>
-                <span>Contact</span>
-            </div>
         </div>
 
         <div class="sticky-note yellow-note">
@@ -103,9 +93,17 @@
             <p class="handwritten">Check sub-micron circuit design refs.</p>
         </div>
 
+        <div class="sticky-note blue-note">
+            <p>Currently Working On:</p>
+            <p class="handwritten">Sustainability-oriented project by YDfCT</p>
+        </div>
+
         <div class="landing-text" id="landing-hero">
             <h2>Welcome to Portfolio</h2>
-            <p id="typing-subtitle"></p>
+            <p class="identity-statement">ECE Undergraduate | Core Electronics | Sustainability | Research</p>
+            <div class="cta-container">
+                <a href="#explore" class="cta-outline" onclick="openWindow('projects')">Explore My Work →</a>
+            </div>
         </div>
 
         <!-- Window: About -->
@@ -128,15 +126,19 @@
                 </div>
                 <div class="bio-text">
                     <h2>Hello, I'm Aarushi</h2>
-                    <p>I am a 2nd-year student pursuing my <strong>B.E. in Electronics and Communication
-                            Engineering</strong> at <strong>Thapar Institute of Engineering and Technology</strong>.</p>
-                    <p style="margin-top: 1rem;">My journey is defined by a curiosity for how things work at a
-                        fundamental
-                        level—from circuit design to signal processing.</p>
-                    <p style="margin-top: 1rem;">I consider myself a disciplined learner and a focused builder. Whether
-                        I'm
-                        deep into a lab project or exploring new concepts, I usually have my headphones on and my mind
-                        immersed in the task at hand.</p>
+                    <p>I am an Electronics and Communication Engineering undergraduate with interests in core
+                        electronics, sustainability, and research-oriented learning. I enjoy applying engineering
+                        concepts to real-world problems, especially where technical work can lead to meaningful and
+                        practical outcomes.</p>
+                    <p style="margin-top: 1rem;">Through my academic journey so far, I have had the opportunity to
+                        contribute to published research and assist in the editing of an academic book, experiences that
+                        have helped me develop a deeper appreciation for careful analysis, technical clarity, and
+                        structured thinking. I have also worked on sustainability-focused projects, including those
+                        related to environmental challenges, which continue to influence the direction of my interests.
+                    </p>
+                    <p style="margin-top: 1rem;">I approach my work with consistency and focus, often spending long
+                        hours learning, experimenting, and improving my understanding. This portfolio is a growing
+                        reflection of my academic progress, projects, and evolving interests.</p>
                 </div>
             </div>
         </div>
@@ -158,18 +160,19 @@
                     <div class="edu-info">
                         <h3>B.E. in Electronics and Communication Engineering</h3>
                         <p class="institution">Thapar Institute of Engineering and Technology</p>
-                        <p class="duration">2023 - 2027 (Expected)</p>
-                        <p class="description">Currently in 2nd Year. Focusing on core subjects like Digital Signal
-                            Processing, Circuit Analysis, and Micro-electronics.</p>
+                        <p class="duration">2024 - 2028 (Expected)</p>
+                        <p class="description">Currently in 2nd Year. Focusing on core subjects such as Digital Signal
+                            Processing, Circuit Analysis, Microelectronics, and other foundational ECE
+                            courses.<br><small>Thapar ECE Department</small></p>
                     </div>
                 </div>
                 <div class="education-item" style="margin-top: 2rem;">
                     <div class="edu-dot"></div>
                     <div class="edu-info">
                         <h3>Higher Secondary Education</h3>
-                        <p class="duration">Completed 2023</p>
-                        <p class="description">Focused on Physics, Chemistry, and Mathematics with a strong interest in
-                            Applied Electronics.</p>
+                        <p class="duration">Completed 2024</p>
+                        <p class="description">Focused on Physics, Chemistry, and Mathematics with a keen interest in
+                            electronics and communication systems.</p>
                     </div>
                 </div>
             </div>
@@ -189,14 +192,21 @@
                 <h2>Academic Papers</h2>
                 <div class="card-grid">
                     <div class="card">
-                        <h3>Advanced Signal Processing in ECE</h3>
-                        <p>A brief overview of signal modulation techniques and their practical applications.</p>
-                        <a href="#" class="card-link">View Paper &rarr;</a>
+                        <h3>Cybersecurity in Autonomous Electric Vehicles</h3>
+                        <p>An analysis of cybersecurity vulnerabilities in autonomous electric vehicles, with a focus on
+                            data-based encryption methods for secure data transmission.</p>
+                        <a href="https://ieeexplore.ieee.org/document/11254978" target="_blank" class="card-link">View
+                            Paper &rarr;</a>
                     </div>
                     <div class="card">
-                        <h3>Core Electronics: The Future</h3>
-                        <p>Exploring the potential of sub-micron circuit design.</p>
-                        <a href="#" class="card-link">View Paper &rarr;</a>
+                        <h3>Data-Driven Modeling</h3>
+                        <p>Editorial contribution to a forthcoming book chapter on data control, privacy, and governance
+                            in modern data-driven modeling systems.</p>
+                        <p class="forthcoming"
+                            style="font-size: 0.85rem; color: #ff7675; font-weight: 600; margin-top: 0.5rem;">
+                            Forthcoming, 2026</p>
+                        <a href="https://www.ns1.scrivenerpublishing.com/cart/title.php?id=1285" target="_blank"
+                            class="card-link">View Book &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -216,12 +226,20 @@
                 <h2>Engineering Projects</h2>
                 <div class="card-grid">
                     <div class="card">
-                        <h3>Embedded Systems Lab</h3>
-                        <p>Microcontroller-based automated system for real-time monitoring.</p>
+                        <h3>Youth Development for Climate Tech (YDCT) Program – Ongoing</h3>
+                        <p><strong>Participant – Virtual Exchange & Prototyping Phase</strong></p>
+                        <p>Collaborating in a multinational team to design climate-tech solutions for renewable energy,
+                            air pollution, and flooding. Completed the Virtual Exchange phase and currently developing a
+                            prototype MVP, applying design thinking and AI/data tools under mentorship.</p>
+                        <a href="https://www.irena.org/Youth/Youth-Development-for-Climate-Tech" target="_blank"
+                            class="card-link">Learn More &rarr;</a>
                     </div>
-                    <div class="card" style="border-style: dashed; opacity: 0.6;">
-                        <h3 style="font-family: var(--handwriting-font);">Working...</h3>
-                        <p>New lab project in progress.</p>
+                    <div class="card">
+                        <h3>Drone Technology Bootcamp</h3>
+                        <p><strong>Participant – Five-Day Hands-On Workshop</strong></p>
+                        <p>Completed a hands-on bootcamp on drone technology, assembly, and flying. Gained practical
+                            experience in UAV hardware, electronics, and software systems, enhancing understanding of
+                            drone design and operation.</p>
                     </div>
                 </div>
             </div>
@@ -251,7 +269,8 @@
 
     <footer class="desktop-footer">
         <div class="footer-socials">
-            <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/aarushi-chatterjee-b20031322" target="_blank" class="social-icon"
+                title="LinkedIn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -259,24 +278,20 @@
                     <circle cx="4" cy="4" r="2" />
                 </svg>
             </a>
-            <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">
+            <a href="https://github.com/Aarushi-Chatterjee" target="_blank" class="social-icon" title="GitHub">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <path
                         d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                 </svg>
             </a>
-            <a href="mailto:aarushi@example.com" class="social-icon" title="Email">
+            <a href="mailto:aarushichatterjee27@gmail.com" class="social-icon" title="Email">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                 </svg>
             </a>
-        </div>
-        <div class="footer-info">
-            <p>© 2025 AARUSHI CHATTERJEE. All rights reserved. | Core Electronics & Signal Processing</p>
-            <p>Electronics and Communication Engineering | Thapar Institute of Engineering and Technology</p>
         </div>
     </footer>
 

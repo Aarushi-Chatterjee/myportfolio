@@ -281,7 +281,7 @@ nav a:hover {
 
 /* Workspace Icons */
 .workspace-icons {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 4rem;
     transform: translateY(-50%);
@@ -343,6 +343,26 @@ nav a:hover {
     transform: rotate(3deg);
 }
 
+.blue-note {
+    background: #bbdefb;
+    /* Soft Blueprint/Baby Blue */
+    bottom: 50%;
+    right: 4%;
+    transform: rotate(-2deg);
+}
+
+.working-on-list {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.working-on-list li {
+    font-size: 1rem !important;
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+
 .sticky-note p {
     font-size: 0.8rem;
     font-weight: 600;
@@ -364,8 +384,40 @@ nav a:hover {
 .landing-text h2 {
     font-family: var(--handwriting-font);
     font-size: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: var(--ink-color);
+}
+
+.identity-statement {
+    font-size: 1.1rem;
+    color: #636e72;
+    /* Soft Grey */
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.02rem;
+}
+
+.cta-container {
+    margin-top: 2rem;
+}
+
+.cta-outline {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border: 1px solid var(--ink-color);
+    border-radius: 30px;
+    color: var(--ink-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.cta-outline:hover {
+    background: rgba(45, 52, 54, 0.05);
+    /* Very subtle hover */
+    transform: translateY(-2px);
 }
 
 #typing-subtitle {
@@ -382,51 +434,40 @@ nav a:hover {
 
 /* Footer */
 .desktop-footer {
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #6ab04c;
-    /* Engineering Green / Themed Color */
+    background: linear-gradient(135deg, #f8a5c2 0%, #f78fb3 100%);
+    /* Deep Baby Pink Gradient */
     color: white;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: none;
     z-index: 5;
 }
 
 .footer-socials {
     display: flex;
     gap: 2rem;
-    margin-bottom: 2rem;
 }
 
 .social-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-decoration: none;
-    transition: transform 0.3s, background 0.3s;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .social-icon:hover {
-    transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.4);
-}
-
-.footer-info {
-    text-align: center;
-    font-size: 0.9rem;
-    opacity: 0.9;
-    letter-spacing: 0.05rem;
-    line-height: 1.6;
-}
-
-.footer-info p {
-    margin-bottom: 0.5rem;
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes blink {
