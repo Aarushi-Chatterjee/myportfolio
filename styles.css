@@ -19,8 +19,7 @@ body {
     background-color: var(--bg-pink);
     color: var(--ink-color);
     font-family: var(--body-font);
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -84,6 +83,8 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: calc(100vh - 80px);
+    /* Adjust based on header height */
 }
 
 /* Mac-style Window with Glassmorphism */
@@ -170,6 +171,95 @@ nav a:hover {
     color: var(--ink-color);
 }
 
+/* About Window Layout */
+.about-window {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.profile-area {
+    display: flex;
+    justify-content: center;
+}
+
+.polaroid-frame {
+    background: white;
+    padding: 1rem 1rem 3rem 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: rotate(-3deg);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 300px;
+    width: 100%;
+}
+
+.profile-photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 1px solid #f0f0f0;
+}
+
+.polaroid-frame .caption {
+    font-family: var(--handwriting-font);
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Education Window Layout */
+.education-window {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-item {
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 3rem;
+    border-left: 2px dashed rgba(0, 0, 0, 0.1);
+}
+
+.edu-dot {
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: var(--ink-color);
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edu-info h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--ink-color);
+}
+
+.edu-info .institution {
+    font-weight: 600;
+    color: #444;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.edu-info .duration {
+    font-family: var(--handwriting-font);
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.edu-info .description {
+    line-height: 1.6;
+    color: #555;
+    font-size: 0.95rem;
+}
+
 /* Cards */
 .card-grid {
     display: grid;
@@ -191,9 +281,10 @@ nav a:hover {
 
 /* Workspace Icons */
 .workspace-icons {
-    position: absolute;
-    top: 4rem;
+    position: fixed;
+    top: 50%;
     left: 4rem;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
@@ -287,6 +378,55 @@ nav a:hover {
 #typing-subtitle::after {
     content: '|';
     animation: blink 0.7s infinite;
+}
+
+/* Footer */
+.desktop-footer {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #6ab04c;
+    /* Engineering Green / Themed Color */
+    color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 5;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.footer-info {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    letter-spacing: 0.05rem;
+    line-height: 1.6;
+}
+
+.footer-info p {
+    margin-bottom: 0.5rem;
 }
 
 @keyframes blink {

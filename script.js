@@ -52,7 +52,7 @@ function typeWriter() {
 
 document.addEventListener('DOMContentLoaded', () => {
     // Navigation link handling
-    document.querySelectorAll('nav a').forEach(link => {
+    document.querySelectorAll('a[data-window]').forEach(link => {
         link.addEventListener('click', (e) => {
             const windowId = link.getAttribute('data-window');
             if (windowId) {
@@ -64,6 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start typing effect
     setTimeout(typeWriter, 1000);
+
+    // Auto-open About Me window on load
+    setTimeout(() => {
+        openWindow('about');
+    }, 500);
 
     // Initial opacity for landing hero transition
     const landingHero = document.getElementById('landing-hero');

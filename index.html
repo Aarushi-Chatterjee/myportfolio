@@ -21,9 +21,9 @@
         <nav>
             <ul>
                 <li><a href="#" data-window="about">About</a></li>
+                <li><a href="#" data-window="education">Education</a></li>
                 <li><a href="#" data-window="publications">Publications</a></li>
                 <li><a href="#" data-window="projects">Projects</a></li>
-                <li><a href="#" data-window="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -40,6 +40,16 @@
                     </svg>
                 </div>
                 <span>About Me</span>
+            </div>
+            <div class="icon-item" onclick="openWindow('education')">
+                <div class="folder-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                </div>
+                <span>Education</span>
             </div>
             <div class="icon-item" onclick="openWindow('publications')">
                 <div class="folder-icon">
@@ -108,15 +118,60 @@
                 </div>
                 <span class="window-title">About Me</span>
             </div>
-            <div class="window-content">
-                <h2>Hello, I'm Aarushi</h2>
-                <p>I am a 2nd-year Electronics and Communication Engineering (ECE) student with a deep passion for core
-                    electronics.</p>
-                <p style="margin-top: 1rem;">My journey is defined by a curiosity for how things work at a fundamental
-                    level—from circuit design to signal processing.</p>
-                <p style="margin-top: 1rem;">I consider myself a disciplined learner and a focused builder. Whether I'm
-                    deep into a lab project or exploring new concepts, I usually have my headphones on and my mind
-                    immersed in the task at hand.</p>
+            <div class="window-content about-window">
+                <div class="profile-area">
+                    <div class="polaroid-frame">
+                        <img src="profile.jpg" alt="Aarushi Chatterjee" class="profile-photo"
+                            onerror="this.src='https://via.placeholder.com/300?text=Place+Photo+Here'">
+                        <p class="caption">Aarushi, ECE Student</p>
+                    </div>
+                </div>
+                <div class="bio-text">
+                    <h2>Hello, I'm Aarushi</h2>
+                    <p>I am a 2nd-year student pursuing my <strong>B.E. in Electronics and Communication
+                            Engineering</strong> at <strong>Thapar Institute of Engineering and Technology</strong>.</p>
+                    <p style="margin-top: 1rem;">My journey is defined by a curiosity for how things work at a
+                        fundamental
+                        level—from circuit design to signal processing.</p>
+                    <p style="margin-top: 1rem;">I consider myself a disciplined learner and a focused builder. Whether
+                        I'm
+                        deep into a lab project or exploring new concepts, I usually have my headphones on and my mind
+                        immersed in the task at hand.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Window: Education -->
+        <div id="window-education" class="window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <span class="control close" onclick="closeWindow('education')"></span>
+                    <span class="control minimize"></span>
+                    <span class="control maximize"></span>
+                </div>
+                <span class="window-title">Education</span>
+            </div>
+            <div class="window-content education-window">
+                <h2>Academic Background</h2>
+                <div class="education-item">
+                    <div class="edu-dot"></div>
+                    <div class="edu-info">
+                        <h3>B.E. in Electronics and Communication Engineering</h3>
+                        <p class="institution">Thapar Institute of Engineering and Technology</p>
+                        <p class="duration">2023 - 2027 (Expected)</p>
+                        <p class="description">Currently in 2nd Year. Focusing on core subjects like Digital Signal
+                            Processing, Circuit Analysis, and Micro-electronics.</p>
+                    </div>
+                </div>
+                <div class="education-item" style="margin-top: 2rem;">
+                    <div class="edu-dot"></div>
+                    <div class="edu-info">
+                        <h3>Higher Secondary Education</h3>
+                        <p class="duration">Completed 2023</p>
+                        <p class="description">Focused on Physics, Chemistry, and Mathematics with a strong interest in
+                            Applied Electronics.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -193,6 +248,37 @@
             </div>
         </div>
     </main>
+
+    <footer class="desktop-footer">
+        <div class="footer-socials">
+            <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                </svg>
+            </a>
+            <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+            </a>
+            <a href="mailto:aarushi@example.com" class="social-icon" title="Email">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+            </a>
+        </div>
+        <div class="footer-info">
+            <p>© 2025 AARUSHI CHATTERJEE. All rights reserved. | Core Electronics & Signal Processing</p>
+            <p>Electronics and Communication Engineering | Thapar Institute of Engineering and Technology</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
