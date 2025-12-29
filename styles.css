@@ -390,31 +390,31 @@ nav a:hover {
 
 .yellow-note {
     background: #fff9c4;
-    bottom: 5%;
-    right: 5%;
+    bottom: 15%;
+    right: 25%;
     transform: rotate(-3deg);
 }
 
 .mint-note {
     background: #e8f5e9;
     /* Soft Mint Green */
-    top: 5%;
-    right: 25%;
+    top: 8%;
+    right: 18%;
     transform: rotate(2deg);
 }
 
 .pink-note {
     background: #f8bbd0;
-    top: 45%;
-    right: 25%;
+    bottom: 35%;
+    right: 15%;
     transform: rotate(3deg);
 }
 
 .blue-note {
     background: #bbdefb;
     /* Soft Blueprint/Baby Blue */
-    top: 25%;
-    right: 5%;
+    top: 35%;
+    right: 8%;
     transform: rotate(-2deg);
 }
 
