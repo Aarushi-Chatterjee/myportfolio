@@ -345,15 +345,15 @@ nav a:hover {
 /* Pen writing effect (scribbles) - static, vertical */
 .pen-ink-mark {
     position: absolute;
-    top: 2rem;
-    left: 4rem;
+    top: 8rem;
+    left: 3rem;
     z-index: 10;
     pointer-events: none;
     color: var(--ink-color);
 }
 
 .scribble-path {
-    opacity: 0.6;
+    opacity: 0.85;
 }
 
 .icon-item {
