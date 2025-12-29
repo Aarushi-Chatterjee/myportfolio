@@ -159,12 +159,49 @@ nav a:hover {
 .window-content {
     flex: 1;
     overflow-y: auto;
+    position: relative;
+    padding: 3rem;
+}
+
+.window-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('blueprint-bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 3rem;
-    /* Restoring original padding */
+    background-attachment: local;
+    /* This makes it stay with the container but it might still scroll.
+       Actually, to make it 'fixed' relative to the scrolling content's frame, 
+       we often use a fixed background on the container itself if it's the scrollable area.
+    */
+    z-index: -1;
+    opacity: 1;
+}
+
+/* Fix for full background: background-attachment: local in some browsers, 
+   but usually background-attachment: fixed on the scrollable container works best for 'full screen feel'
+   relative to the viewport. For a div, let's use background-attachment: local which keeps it 
+   with the content as it scrolls, but we want it to NOT scroll away. 
+   Wait, if it's 'full screen like about me', and Education is long, 
+   the user wants the pattern to cover the whole scrollable area. 
+   'background-attachment: scroll' (default) scrolls with content.
+   'background-attachment: local' scrolls with the element's content.
+   If we want it to NOT scroll (stay static while text moves), 
+   we should put it on a non-scrolling parent or use a pseudo-element with position: absolute/fixed.
+*/
+
+.window-content {
+    background-image: url('blueprint-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* This works globally but might be tricky in some contexts. Let's try it first. */
 }
 
 .window-content h2 {
@@ -212,10 +249,15 @@ nav a:hover {
     color: #555;
 }
 
-/* Education Window Layout */
 .education-window {
+    /* Background is on .window-content, which is the same element */
+    /* Layout preservation for content below */
+}
+
+.education-window>* {
     max-width: 800px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .education-item {
@@ -298,6 +340,41 @@ nav a:hover {
     flex-direction: column;
     gap: 2.5rem;
     z-index: 5;
+}
+
+/* Pen writing effect at top topmost icons */
+.pen-ink-mark {
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.pen-ink-mark p {
+    font-family: var(--handwriting-font);
+    font-size: 1.1rem;
+    color: var(--ink-color);
+    line-height: 1.2;
+    opacity: 0.8;
+    transform: rotate(-2deg);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing-ink 2s steps(20) forwards;
+}
+
+.pen-ink-mark p:last-child {
+    animation-delay: 1s;
+}
+
+@keyframes typing-ink {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 .icon-item {
